@@ -1,0 +1,279 @@
+/* === Root Theme Variables === */
+:root {
+  --bg-dark: #1e1e2f;
+  --text-light: #f8f8f2;
+  --accent-pink: #ff79c6;
+  --accent-purple: #bd93f9;
+  --accent-cyan: #8be9fd;
+  --accent-orange: #ffb86c;
+}
+
+/* === Global Styles === */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+/* === Navigation Bar === */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #12121a;
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+  flex-wrap: wrap;
+}
+.profile-pic {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #8be9fd;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-pic:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #8be9fd, 0 0 30px #8be9fd;
+}
+
+
+.logo {
+  font-size: 1.5rem;
+  color: var(--accent-purple);
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+  color: var(--accent-pink);
+}
+
+/* === Hero Section === */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(135deg, #1e1e2f 40%, #282a36 100%);
+  padding: 2rem;
+}
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content span {
+  color: var(--accent-cyan);
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.cta-btn {
+  background-color: var(--accent-purple);
+  color: var(--text-light);
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.cta-btn:hover {
+  background-color: var(--accent-pink);
+}
+
+/* === About Section === */
+.about-section {
+  padding: 4rem 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+.about-section h1,
+.about-section h2 {
+  color: var(--accent-cyan);
+  margin-bottom: 1rem;
+}
+
+.about-section p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.skills-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0;
+}
+
+.skills-list li {
+  background: var(--accent-purple);
+  color: var(--bg-dark);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+/* === Projects Section === */
+.projects-section {
+  padding: 3rem 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+.projects-section h2 {
+  color: var(--accent-cyan);
+  margin-bottom: 2rem;
+}
+
+.project {
+  background-color: #292947;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(132, 233, 255, 0.2);
+}
+
+.project h3 {
+  color: var(--accent-purple);
+}
+
+.project p {
+  margin-top: 0.5rem;
+  color: var(--text-light);
+}
+.contact-section {
+  padding: 2rem 1rem;
+  max-width: 400px;
+  margin: 3rem auto;
+  background-color: rgba(30, 30, 47, 0.85);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.1);
+  text-align: center;
+  backdrop-filter: blur(6px);
+}
+
+.contact-section h2 {
+  font-size: 1.5rem;
+  color: var(--accent-cyan);
+  margin-bottom: 0.5rem;
+}
+
+.contact-section p {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.6rem 0.9rem;
+  font-size: 0.95rem;
+  background-color: #2a2a40;
+  border: 1px solid #444;
+  border-radius: 6px;
+  color: white;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #888;
+}
+
+.contact-form textarea {
+  height: 100px;
+}
+
+.contact-form button {
+  background-color: var(--accent-purple);
+  color: white;
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 0.6rem 0;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+.contact-form button:hover {
+  background-color: var(--accent-pink);
+}
+
+#formMessage {
+  font-size: 0.9rem;
+  margin-top: 0.8rem;
+}
+
+
+/* === Responsive Styles === */
+@media screen and (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    padding-left: 0;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  section {
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+}
